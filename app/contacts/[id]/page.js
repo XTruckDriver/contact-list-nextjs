@@ -1,5 +1,5 @@
 import React from 'react';
-import ContactListApp from './components/ContactListApp.js';
+import ContactListApp from '../../components/ContactListApp';
 
 export default function Home() {
   return (
