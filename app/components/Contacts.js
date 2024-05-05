@@ -1,5 +1,6 @@
 'use client';
 import React, { useState } from 'react';
+import Link from 'next/link';
 
 function Contacts({ contactList }) {
 
@@ -7,6 +8,7 @@ function Contacts({ contactList }) {
     return (
       <>
         <h2>All Contacts</h2>
+        <Link href={'/contacts/new'}>Add Contact</Link>
         <table className="table">
       <thead>
         <tr>

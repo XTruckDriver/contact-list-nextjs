@@ -1,5 +1,6 @@
 'use client';
 import React, { useState } from 'react';
+import Link from 'next/link';
 
 
 function Form({ handleAddContact }) {
@@ -40,6 +41,7 @@ function Form({ handleAddContact }) {
     return (
       <>
         <h2>Add New Contact</h2>
+        <Link href="/contacts">Cancel</Link>
         <form onSubmit={handleSubmit}>
           <div>
             <label htmlFor='inputName' className='form-label'>Name</label>
