@@ -1,5 +1,5 @@
-export const initialList = [
-  {
+export const ContactListAPI = {
+  contacts: [{
     id: 70219577,
     name: "Bryce Harper",
     imageURL: "https://a.espncdn.com/combiner/i?img=/i/headshots/mlb/players/full/30951.png",
@@ -26,5 +26,13 @@ export const initialList = [
     imageURL: "https://a.espncdn.com/combiner/i?img=/i/headshots/mlb/players/full/31267.png",
     email: "zwheeler@phillies.com",
     phone: "16094882395"
+  }],
+  addContact: function (newContact) {
+    ContactListAPI.contacts.push(newContact)
   },
-];
+  deleteContact: function () {},
+
+  editContact: function () {},
+}
+
+

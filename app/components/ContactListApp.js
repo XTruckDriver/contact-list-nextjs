@@ -1,31 +1,25 @@
 'use client';
-import { useState } from 'react';
-import Contacts from './Contacts';
+import React from 'react';
+import List from './List.js';
 import Form from './Form.js';
-import { initialList } from '../data/initialList';
-import { useRouter } from 'next/navigation';
+import Link from 'next/link';
+import { ContactListAPI } from '../data/ContactListAPI.js';
+
 
 function ContactListApp() {
+// get contacts
+const contacts = ContactListAPI.contacts;
 
-    const [contactList, setContactList] = useState(initialList);
-    const router = useRouter();
-
-    const handleAddContact = (newContact) => {
-      setContactList([
-        ...contactList, newContact
-      ]
-      );
-      
-       router.push('/contacts');
-    }
-
+console.log(contacts);
     return (
       <>
-        <h1>Contact List App</h1>
-        <Contacts contactList={contactList} />
-        <Form handleAddContact = {handleAddContact}/>
+        <h2>All Contacts</h2>
+        <Link href="/contacts/new">Add New</Link>
+        <p>Search Bar will be here</p>
+        <List contacts={contacts}/>
+        <Form  addContact={ContactListAPI.addContact}/>
+        
       </>
     );
-
 }
 export default ContactListApp

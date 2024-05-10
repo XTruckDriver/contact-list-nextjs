@@ -1,10 +1,14 @@
+'use client'
 import React from 'react';
-import ContactListApp from '../../components/ContactListApp.js';
+import Form from '../../components/Form.js';
+import { ContactListAPI } from '@/app/data/ContactListAPI.js';
 
-export default function Home() {
+
+export default function New() {
+
   return (
     <main>
-      <ContactListApp />
+      <Form addContact={ContactListAPI.addContact} />
     </main>
-  )
+  );
 }

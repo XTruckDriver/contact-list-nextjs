@@ -1,13 +1,16 @@
 'use client';
 import React, { useState } from 'react';
 import Link from 'next/link';
+import { useRouter } from 'next/navigation';
 
 
-function Form({ handleAddContact }) {
+function Form({ addContact }) {
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [imageURL, setImageURL] = useState("");
   const [phone, setPhone] = useState("");
+
+  const router = useRouter();
 
     
   const handleSubmit = (e) => {
@@ -24,17 +27,10 @@ function Form({ handleAddContact }) {
 
 
     console.log(`newContact = ${newContact}`);
-    // router.push('/contacts');
 
-    handleAddContact(newContact);
-    
-    //addContact(newContact);
-    setName('');
-    setEmail('');
-    setImageURL('');
-    setPhone('');
 
-  
+    addContact(newContact);
+    router.push('/contacts');
 
   };
 

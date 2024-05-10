@@ -1,10 +1,9 @@
 import React from 'react';
-import ContactListApp from './components/ContactListApp.js';
 
 export default function Home() {
   return (
     <main>
-      <ContactListApp />
+      <h1>Contact List App</h1>
     </main>
   )
 }
