@@ -36,8 +36,8 @@ function Form({ addContact }) {
 
     return (
       <>
-        <h2>Add New Contact</h2>
-        <Link href="/contacts">Cancel</Link>
+      
+        
         <form onSubmit={handleSubmit}>
           <div>
             <label htmlFor='inputName' className='form-label'>Name</label>
