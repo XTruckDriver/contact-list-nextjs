@@ -1,14 +1,18 @@
 'use client';
 
-//import { useRouter } from 'next/navigation';
+import { useRouter } from 'next/navigation';
 
 function Contact({ contact }) {
 
-console.log(`<Contact /> => contact: ${contact}`);
+const router = useRouter();
+const handleClick = () => {
+    router.push(`/contacts/${contact.id}`)
+};
+
 
     return (
       <>
-        <tr key={contact.id}>
+        <tr onClick={handleClick} key={contact.id} >
           <td>
             <img  src={contact.imageURL}
               alt='Profile Pic'

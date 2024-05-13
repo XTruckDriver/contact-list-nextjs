@@ -18,7 +18,7 @@ function Form({ addContact }) {
    
     const randomId = Math.round(Math.random() * 100000000);
     const newContact =  {
-                          id: randomId,
+                          id: randomId.toString(),
                           name: name,
                           email: email,
                           imageURL: imageURL,

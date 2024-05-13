@@ -1,8 +1,13 @@
 'use client';
 import Contact from './Contact.js';
 import PropTypes from 'prop-types';
+import { useRouter } from 'next/navigation';
 
 function List({ contacts }) {
+
+    const router = useRouter;
+    const viewProfile = `/contacts/${contacts.id}`;
+
 console.log(`<List /> : contacts = ${contacts}`);
   return (
     <>
@@ -18,8 +23,8 @@ console.log(`<List /> : contacts = ${contacts}`);
         </tr>
       </thead>
       <tbody>
-        
-          {contacts.map((singleContact) => <Contact contact={singleContact} key={singleContact.id}/> )}
+
+          {contacts.map((singleContact) => <Contact contact={singleContact} key={singleContact.id} /> )}
       </tbody>
     </table>
     </>
