@@ -1,5 +1,6 @@
 'use client';
 import Contact from './Contact.js';
+import PropTypes from 'prop-types';
 
 function List({ contacts }) {
 console.log(`<List /> : contacts = ${contacts}`);
@@ -25,5 +26,9 @@ console.log(`<List /> : contacts = ${contacts}`);
   );
 
 }
+
+List.propTypes = {
+  contacts: PropTypes.arrayOf(PropTypes.object)
+};
 
 export default List;
