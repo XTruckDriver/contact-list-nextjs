@@ -37,7 +37,9 @@ export const ContactListAPI = {
     return (ContactListAPI.contacts.find(isContact));
   },
 
-  deleteContact: function () {},
+  deleteContact: (id) => {
+    ContactListAPI.contacts.filter((c) => c.id !== id);
+  },
 
   editContact: function () {},
 }

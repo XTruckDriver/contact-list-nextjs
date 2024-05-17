@@ -15,6 +15,11 @@ function Form({ addContact }) {
     
   const handleSubmit = (e) => {
     e.preventDefault();
+
+    if (!name || !email || !imageURL || !phone) {
+      alert('All Fields Must Be Filled Out');
+      return;
+    }
    
     const randomId = Math.round(Math.random() * 100000000);
     const newContact =  {
