@@ -11,9 +11,8 @@ export default function Home() {
 
   return (
     <>
-      <h1>Home Page - Contact List App</h1>
+      <h1>Home Page</h1>
       <Link href="/contacts/new">Add New</Link>
-      <p>Search Bar will be here</p>
       <List contacts={contacts} />
     </>
   )

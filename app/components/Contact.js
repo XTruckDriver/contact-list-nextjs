@@ -1,10 +1,13 @@
 'use client';
 
 import { useRouter } from 'next/navigation';
+import Link from 'next/link';
+import { ContactListAPI } from '../data/ContactListAPI';
 
 function Contact({ contact }) {
 
 const router = useRouter();
+
 const handleClick = () => {
     router.push(`/contacts/${contact.id}`)
 };
@@ -12,7 +15,7 @@ const handleClick = () => {
 
     return (
       <>
-        <tr onClick={handleClick} key={contact.id} >
+        <tr key={contact.id} onClick={handleClick} >
           <td>
             <img  src={contact.imageURL}
               alt='Profile Pic'

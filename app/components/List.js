@@ -2,14 +2,12 @@
 import Contact from './Contact.js';
 import PropTypes from 'prop-types';
 import { useRouter } from 'next/navigation';
-import { ContactListAPI } from '../data/ContactListAPI.js';
+
 
 function List({ contacts }) {
 
     const router = useRouter;
-    const viewProfile = `/contacts/${contacts.id}`;
 
-console.log(`<List /> : contacts = ${contacts}`);
   return (
     <>
       <table className="table">

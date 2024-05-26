@@ -31,9 +31,6 @@ function Form({ addContact }) {
     };
 
 
-    console.log(`newContact = ${newContact}`);
-
-
     addContact(newContact);
     router.push('/contacts');
 
